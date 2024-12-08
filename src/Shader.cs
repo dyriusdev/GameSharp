@@ -47,8 +47,12 @@ public class Shader  {
         GL.DeleteShader(fragmentShader);
     }
 
-    public void Use() {
+    public void Bind() {
         GL.UseProgram(program);
+    }
+    
+    public void UnBind() {
+        GL.UseProgram(0);
     }
 
     public void Dispose() {
